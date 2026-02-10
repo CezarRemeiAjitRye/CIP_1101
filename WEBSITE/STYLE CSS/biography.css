@@ -1,0 +1,110 @@
+.biography-section {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 50px;
+}
+
+.bio-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 40px 20px;
+    background-color: var(--main-green);
+    color: var(--white);
+    border: 3px solid var(--main-green);
+    border-radius: 8px;
+}
+
+.bio-header h1 {
+    font-family: 'Lora', serif;
+    font-size: 48px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.bio-nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 14px;
+}
+
+.bio-nav a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.bio-nav a:hover {
+    text-decoration: underline;
+}
+
+.bio-section {
+    margin-bottom: 60px;
+    padding: 40px;
+    border: 3px solid var(--main-green);
+    border-radius: 8px;
+    background-color: var(--white);
+}
+
+.bio-section h2 {
+    font-family: 'Lora', serif;
+    color: var(--main-green);
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.bio-section p {
+    font-size: 14px;
+    line-height: 1.8;
+    text-align: justify;
+    text-indent: 2em;
+    margin-bottom: 20px;
+}
+
+.bio-section sup {
+    font-size: 10px;
+    color: var(--main-green);
+    font-weight: bold;
+}
+
+.bio-photo-container {
+    width: 100%;
+    max-width: 5000px;
+    height: 350px;
+    margin: 0 auto 30px;
+    background-color: var(--main-green);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bio-photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.go-to-top {
+    color: var(--main-green);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.go-to-top:hover {
+    color: var(--dark-green);
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .bio-nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .bio-section {
+        padding: 30px 20px;
+    }
+}
