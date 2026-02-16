@@ -71,17 +71,6 @@ h2 {
     object-fit: cover;
 }
 
-.go-to-top {
-    color: var(--main-green);
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 14px;
-}
-
-.go-to-top:hover {
-    color: var(--dark-green);
-}
-
 /* Responsive */
 @media (max-width: 768px) {
     h1 {

@@ -118,18 +118,6 @@
     font-size: 14px;
 }
 
-.go-to-top {
-    color: var(--main-green);
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 14px;
-}
-
-.go-to-top:hover {
-    color: var(--dark-green);
-    transform: translateY(-3px);
-}
-
 /* Contact Section */
 .contact-section {
     text-align: center;
