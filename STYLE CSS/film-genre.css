@@ -84,6 +84,7 @@ header h1 {
 
 .movie-info {
     padding: 30px;
+    grid-column: 1 / -1;
 }
 
 .movie-title {
@@ -131,6 +132,7 @@ header h1 {
     font-size: 14px;
     line-height: 1.8;
     color: #555;
+    text-align: justify;
 }
 
 /* Responsive Design */

@@ -84,6 +84,7 @@ header h1 {
 
 .show-info {
     padding: 30px 30px 30px 40px;
+    grid-column: 1 / -1;
 }
 
 .show-title {
