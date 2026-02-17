@@ -80,8 +80,6 @@ header p {
     border: 2px solid var(--main-green);
     border-radius: 8px;
     overflow: hidden;
-    transition: all 0.3s ease;
-    cursor: pointer;
 }
 
 /* Preview Collage - Music (Square aspect) */
@@ -95,9 +93,10 @@ header p {
     overflow: hidden;
 }
 
-/* Preview Collage - Film (Portrait aspect) */
+/* Preview- Film */
 .preview-collage.film-collage {
-    height: 220px;
+    grid-template-columns: 1fr;
+    height: 180px;
 }
 
 .collage-image {

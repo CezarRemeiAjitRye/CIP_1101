@@ -18,6 +18,18 @@ header p {
     color: var(--cream)
 }
 
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: var(--cream);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
 /* Playlists Section */
 .playlists-section {
     max-width: 1200px;

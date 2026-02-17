@@ -18,37 +18,11 @@ header p {
     color: var(--cream)
 }
 
-.back-link {
-    display: inline-block;
-    margin-top: 20px;
-    color: var(--cream);
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.back-link:hover {
-    text-decoration: underline;
-}
-
 /* Playlists Section */
 .playlists-section {
     max-width: 1200px;
     margin: 80px auto;
     padding: 0 50px;
-}
-
-.section-title {
-    font-size: 36px;
-    font-family: 'Playfair Display', serif;
-    text-align: center;
-    margin-bottom: 60px;
-    color: var(--dark-green);
-}
-
-.playlists-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 40px;
 }
 
 .playlist-showcase {
@@ -131,12 +105,22 @@ header p {
     background-color: #1a4d44;
 }
 
+.go-to-top {
+    display: block;
+    text-align: center;
+    color: var(--main-green);
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 40px;
+    font-size: 16px;
+}
+
+.go-to-top:hover {
+    color: var(--dark-green);
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
-    .playlists-grid {
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    }
-    
     .playlist-collage {
         height: 220px;
         grid-template-columns: repeat(3, 1fr);
@@ -146,10 +130,6 @@ header p {
 @media (max-width: 768px) {
     .playlists-section {
         padding: 0 30px;
-    }
-    
-    .playlists-grid {
-        grid-template-columns: 1fr;
     }
     
     .playlist-collage {
