@@ -1,21 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-green: #206155;
+    --dark-green: #071E22;
+    --white: #FFFBFF;
+    --cream: #F1DABF;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: var(--white);
+    color: var(--dark-green);
+    line-height: 1.6;
+}
+
 /* Header */
 header {
     background-color: var(--main-green);
     color: var(--white);
-    padding: 80px 20px;
+    padding: 50px 20px;
     text-align: center;
 }
 
 header h1 {
     font-family: 'Lora', serif;
-    font-size: 56px;
+    font-size: 48px;
     letter-spacing: 2px;
     margin-bottom: 15px;
 }
 
 header p {
-    font-size: 18px;
+    font-size: 16px;
     color: var(--cream);
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: var(--cream);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.back-link:hover {
+    text-decoration: underline;
 }
 
 /* Intro Section */
@@ -57,12 +89,12 @@ header p {
 .map-container {
     position: relative;
     width: 100%;
-    max-width: 1000px;
     margin: 0 auto;
     border: 3px solid var(--main-green);
     border-radius: 8px;
     overflow: hidden;
     background-color: var(--cream);
+    padding: 0;
 }
 
 .world-map {
@@ -172,10 +204,6 @@ header p {
     object-fit: cover;
     display: block;
     transition: transform 0.3s ease;
-}
-
-.gallery-item:hover img {
-    transform: scale(1.05);
 }
 
 .caption {

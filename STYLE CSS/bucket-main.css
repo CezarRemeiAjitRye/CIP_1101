@@ -1,3 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-green: #206155;
+    --dark-green: #071E22;
+    --white: #FFFBFF;
+    --cream: #F1DABF;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: var(--white);
+    color: var(--dark-green);
+    line-height: 1.6;
+}
+
+
 /* Header */
 header {
     background-color: var(--main-green);
@@ -18,14 +39,14 @@ header p {
     color: var(--cream);
 }
 
-/* Media Section */
-.media-section {
+/* Bucket Section */
+.bucket-section {
     max-width: 1400px;
     margin: 80px auto;
     padding: 0 50px;
 }
 
-.media-showcase {
+.bucket-showcase {
     background-color: var(--white);
     border: 3px solid var(--main-green);
     border-radius: 8px;
@@ -33,8 +54,8 @@ header p {
     margin-bottom: 60px;
 }
 
-/* Media Header */
-.media-header {
+/* Bucket Header */
+.bucket-header {
     display: flex;
     align-items: center;
     gap: 25px;
@@ -67,71 +88,68 @@ header p {
     color: #666;
 }
 
-/* Preview Grid */
-.preview-grid {
+/* Single Large Photo Container */
+.photo-container {
+    width: 100%;
+    height: 500px;
+    background-color: var(--cream);
+    border-radius: 12px;
+    margin-bottom: 40px;
+    border: 2px solid var(--main-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* When you add your photo, use this class */
+.photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Bucket List Preview */
+.bucket-list-preview {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     margin-bottom: 40px;
 }
 
-.preview-card {
+.preview-category {
     background-color: #f9f9f9;
-    border: 2px solid var(--main-green);
+    padding: 30px;
     border-radius: 8px;
-    overflow: hidden;
+    border-left: 4px solid var(--main-green);
 }
 
-/* Preview Collage - Music (Square aspect) */
-.preview-collage {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0;
-    height: 180px;
-    width: 101%;
-    background-color: var(--cream);
-    overflow: hidden;
-}
-
-/* Preview- Film */
-.preview-collage.film-collage {
-    grid-template-columns: 1fr;
-    height: 180px;
-}
-
-.collage-image {
-    width: 100%;
-    height: 100%;
-    background-color: var(--cream);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.collage-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Preview Info */
-.preview-info {
-    padding: 20px;
-    background-color: var(--white);
-}
-
-.preview-info h3 {
+.preview-category h3 {
     font-family: 'Playfair Display', serif;
-    font-size: 22px;
+    font-size: 24px;
     color: var(--main-green);
-    margin-bottom: 8px;
+    margin-bottom: 20px;
 }
 
-.preview-info p {
-    font-size: 13px;
-    color: #666;
-    line-height: 1.5;
+.preview-category ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.preview-category ul li {
+    font-size: 15px;
+    color: var(--dark-green);
+    padding: 10px 0;
+    padding-left: 25px;
+    position: relative;
+}
+
+.preview-category ul li:before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: var(--main-green);
+    font-weight: bold;
 }
 
 /* Explore Button */
@@ -150,25 +168,21 @@ header p {
 
 .explore-btn:hover {
     background-color: #1a4d44;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(32, 97, 85, 0.3);
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
-    .preview-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
-}
-
 @media (max-width: 768px) {
-    .media-section {
+    .bucket-section {
         padding: 0 30px;
     }
 
-    .media-showcase {
+    .bucket-showcase {
         padding: 30px;
     }
 
-    .media-header {
+    .bucket-header {
         flex-direction: column;
         text-align: center;
     }
@@ -183,16 +197,12 @@ header p {
         font-size: 36px;
     }
 
-    .preview-grid {
+    .photo-container {
+        height: 350px;
+    }
+
+    .bucket-list-preview {
         grid-template-columns: 1fr;
-    }
-
-    .preview-collage {
-        height: 160px;
-    }
-
-    .preview-collage.film-collage {
-        height: 200px;
     }
 }
 
@@ -204,12 +214,16 @@ header p {
     .header-text h2 {
         font-size: 32px;
     }
-
-    .preview-collage {
-        height: 140px;
+    
+    .photo-container {
+        height: 250px;
     }
-
-    .preview-collage.film-collage {
-        height: 180px;
+    
+    .photo-placeholder span {
+        font-size: 48px;
+    }
+    
+    .photo-placeholder p {
+        font-size: 16px;
     }
 }
