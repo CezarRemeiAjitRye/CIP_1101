@@ -106,11 +106,6 @@ header p {
     transition: all 0.3s ease;
 }
 
-.bucket-item:hover {
-    background-color: var(--cream);
-    transform: translateX(5px);
-}
-
 .item-number {
     flex-shrink: 0;
     width: 50px;
